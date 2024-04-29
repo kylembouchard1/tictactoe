@@ -55,7 +55,7 @@ function checkWinner() {
   
       console.log(board[row1][col1], board[row2][col2], board[row3][col3]);
   
-      // Check if all cells in the winning condition are the same and not empty
+     
       if (
         board[row1][col1] !== '' &&
         board[row1][col1] === board[row2][col2] &&
@@ -66,7 +66,7 @@ function checkWinner() {
       }
     }
   
-    // If all cells are filled and no winner, it's a draw
+    
     if (board.every(row => row.every(cell => cell !== ''))) {
       showWinner('draw');
     }
@@ -80,22 +80,11 @@ function checkWinner() {
     }
     const alertElement = `<div class="alert alert-primary mt-3" role="alert">${message}</div>`;
     
-    // Use querySelector instead of getElementById
+    
     const winnerMessageElement = document.querySelector('#winner-message');
     if (winnerMessageElement) {
       winnerMessageElement.innerHTML = alertElement;
-    } else {
-      console.error("Element with ID 'winner-message' not found");
     }
   }
-//   function showWinner(winner) {
-//     let message;
-//     if (winner === 'draw') {
-//       message = "It's a Draw!";
-//     } else {
-//       message = `${winner} Wins!`;
-//     }
-//     const alertElement = `<div class="alert alert-primary mt-3" role="alert">${message}</div>`;
-//     document.getElementById('winner-message').innerHTML = alertElement;
-//   }
+
   
