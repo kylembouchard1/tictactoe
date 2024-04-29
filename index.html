@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <style>
+    .cell {
+      width: 100px;
+      height: 100px;
+      font-size: 36px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Tic Tac Toe</h1>
+    <h2 id="turn">X's Turn</h2>
+    <div class="row">
+      <div class="col-4 cell" id="cell-0-0" onclick="makeMove(0, 0)"></div>
+      <div class="col-4 cell" id="cell-0-1" onclick="makeMove(0, 1)"></div>
+      <div class="col-4 cell" id="cell-0-2" onclick="makeMove(0, 2)"></div>
+    </div>
+    <div class="row">
+      <div class="col-4 cell" id="cell-1-0" onclick="makeMove(1, 0)"></div>
+      <div class="col-4 cell" id="cell-1-1" onclick="makeMove(1, 1)"></div>
+      <div class="col-4 cell" id="cell-1-2" onclick="makeMove(1, 2)"></div>
+    </div>
+    <div class="row">
+      <div class="col-4 cell" id="cell-2-0" onclick="makeMove(2, 0)"></div>
+      <div class="col-4 cell" id="cell-2-1" onclick="makeMove(2, 1)"></div>
+      <div class="col-4 cell" id="cell-2-2" onclick="makeMove(2, 2)"></div>
+    </div>
+    <button class="btn btn-primary mt-3" onclick="restartGame()">Restart Game</button>
+  </div>
+  <div id="winner-message"></div>
+    
+    
+   
+    
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="index.js"></script>  
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
